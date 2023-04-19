@@ -31,8 +31,8 @@ const middles = [
   "How's everything going? ",
   "You won't believe who I ran into today. ",
   "I want to ask for your advice on something when we have more time. ",
-  "I found something that reminded me of you. ",
-  "I have an exciting update to share with you. "
+  "You were on my mind today. ",
+  "I have an exciting update to share with you later. "
 ];
 //End section of random message
 const ends = [
