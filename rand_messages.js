@@ -53,15 +53,31 @@ const ends = [
   "Until next time!"
 ];
 
+const asciiBeginnings = [
+    "   .---.  \n / o   o \\ \n",
+    "   .---.  \n / -   - \\ \n",
+];
+  
+const asciiMiddles = [
+    "|    ^    |\n",
+    "|    >    |\n",
+];
+
+const asciiEnds = [
+    " \\  \\_/  / \n  ------- \n",
+    " \\  ---  / \n  ------- \n",
+];
+
 //Select a random element from an array
 function getRandomComponent(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 };
 
 function createRandomMessage() {
-    const beginning = getRandomComponent(beginnings);
-    const middle = getRandomComponent(middles);
-    const end = getRandomComponent(ends);
+    const isAscii = Math.random(); //Random chance to return random text or ASCII art
+    const beginning = getRandomComponent(isAscii ? asciiBeginnings : beginnings);
+    const middle = getRandomComponent(isAscii ? asciiMiddles : middles);
+    const end = getRandomComponent(isAscii ? asciiEnds : ends);
     return beginning + middle + end;
 };
 
