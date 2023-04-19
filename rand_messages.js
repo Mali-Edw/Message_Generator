@@ -74,7 +74,7 @@ function getRandomComponent(arr) {
 };
 
 function createRandomMessage() {
-    const isAscii = Math.random(); //Random chance to return random text or ASCII art
+    const isAscii = Math.random() < 0.5; //Random chance to return random text or ASCII art
     const beginning = getRandomComponent(isAscii ? asciiBeginnings : beginnings);
     const middle = getRandomComponent(isAscii ? asciiMiddles : middles);
     const end = getRandomComponent(isAscii ? asciiEnds : ends);
